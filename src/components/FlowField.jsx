@@ -1,18 +1,18 @@
 import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
-
+import noise2D from "../utils/noise";
 const ROWS = 90;
 const COLS = 150;
 const SPACING = 0.085;
 const RIVER_COUNT = 35000;
 
 function getHeight(x, z) {
-    return (
-        Math.sin(x * 1.4) * 0.35 +
-        Math.cos(z * 1.8) * 0.35 +
-        Math.sin((x + z) * 0.9) * 0.25
-    );
+    const large = noise2D(x * 0.18, z * 0.18) * 1.1;
+    const medium = noise2D(x * 0.45, z * 0.45) * 0.35;
+    const small = noise2D(x * 0.9, z * 0.9) * 0.12;
+
+    return large + medium + small;
 }
 
 function riverCenterZ(x, time = 0) {
