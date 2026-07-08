@@ -50,6 +50,14 @@ Instead of presenting information through traditional visualizations, this proje
 
 ---
 
+## 🌐 Live Demo
+
+<p align="center">
+  <a href="https://synapsefloww.vercel.app/">
+    <strong>Experience SynapseFlow in your browser →</strong>
+  </a>
+</p>
+
 # Features
 
 - Procedural terrain generation using layered Simplex Noise
@@ -262,7 +270,7 @@ Rather than presenting a finished scientific model, SynapseFlow serves as an exp
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/SnapsFlow.git
+git clone https://github.com/Ashiesharma/SynapseFlow.git
 ```
 
 Navigate into the project
